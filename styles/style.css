@@ -1,0 +1,98 @@
+@font-face {
+  font-family: abolition;
+  src: url('../assets/fonts/Abolition-Sharp.ttf') format("truetype"),
+  	   url('../assets/fonts/Abolition-Sharp.woff') format("woff"),
+  	   url('../assets/fonts/Abolition-Sharp.eot') format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --navbar: #291e2c;
+  --background: #4e3644;
+}
+
+* {
+	font-family: abolition;
+	letter-spacing: 1px; 
+}
+
+.navbar-brand {
+	padding: 0;
+
+}
+
+.navbar {
+	background-color: var(--navbar);
+	display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+	color: white;
+	font-size: 200%;
+}
+
+.navbar-brand:hover {
+	color: white;
+}
+
+.nav-button {
+	display: inline-block;
+	position: relative;
+	color: white;
+	text-decoration: none;
+	font-size: 150%;
+	vertical-align: middle;
+	padding-top: 0.2%;
+}
+
+.nav-button:hover {
+	color: white;
+}
+
+.nav-button:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.nav-button:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.nav-button-container {
+	margin: 10px;
+	display: flex;
+    align-items: center;
+}
+
+body {
+	background-color: var(--background);
+}
+
+.contact-button {
+	padding: 0.5%;
+	padding-top: 0.2%;
+	border-radius: 5px;
+	color: white;
+	font-size: 120%;
+	background-color: none;
+	border: solid 2px white;
+	text-decoration: none;
+	transition: .3s;
+}
+
+.contact-button:hover {
+	color: black;
+	background-color: white;
+
+}
