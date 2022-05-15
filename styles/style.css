@@ -11,16 +11,6 @@
   font-weight: bold;
 }
 
-:root {
-  --navbar: #291e2c;
-  --background: #4e3644;
-  --contrast: #f0bd30;
-}
-
-* {
-	font-family: abolition;
-}
-
 @keyframes typing {
   from {
   	width: 0;
@@ -39,9 +29,23 @@
   }
 }
 
+:root {
+  --navbar: #291e2c;
+  --background: #4e3644;
+  --contrast: #f0bd30;
+  --text: white;
+}
+
+* {
+	font-family: abolition;
+}
+
 .navbar-brand {
 	padding: 0;
+}
 
+.brand-name {
+	color: var(--text);
 }
 
 .navbar {
@@ -52,18 +56,18 @@
 }
 
 .navbar-brand {
-	color: white;
+	color: var(--text);
 	font-size: 200%;
 }
 
 .navbar-brand:hover {
-	color: white;
+	color: var(--text);
 }
 
 .nav-button {
 	display: inline-block;
 	position: relative;
-	color: white;
+	color: var(--text);
 	text-decoration: none;
 	font-size: 150%;
 	vertical-align: middle;
@@ -71,7 +75,7 @@
 }
 
 .nav-button:hover {
-	color: white;
+	color: var(--text);
 }
 
 .nav-button:after {
@@ -82,7 +86,7 @@
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: white;
+	background-color: var(--text);
 	transform-origin: bottom right;
 	transition: transform 0.25s ease-out;
 }
@@ -98,8 +102,17 @@
     align-items: center;
 }
 
+.container-fluid {
+	margin-right: 2.5%;
+	margin-left: 2.5%;
+}
+
 body {
 	background-color: var(--background);
+	/*
+	background-image: url("../assets/images/facility.png");
+	background-size: cover;
+	*/
 }
 
 .contact-button {
@@ -117,6 +130,27 @@ body {
 	background-color: var(--contrast);
 }
 
+.discover-button {
+	color: black;
+	font-size: 200%;
+	padding: 10px;
+	margin-top: 1%;
+	background-color: var(--contrast);
+	border: 2px solid var(--contrast);
+	text-decoration: none;
+	width: 20%;
+	transition: .3s;
+}
+
+.discover-button:hover {
+	color: var(--contrast);
+	background-color: transparent;
+}
+
+.discover-container {
+	margin-top: 1%;
+}
+
 .container {
 	margin: 5%;
 	margin-top: 3%;
@@ -124,9 +158,9 @@ body {
 
 .cta-container {
 	font-size: 850%;
-	color: white;
+	color: var(--text);
 	line-height: 120%;
-	letter-spacing: 1px; 
+	letter-spacing: 1px;
 }
 
 .typewriter {
@@ -141,7 +175,7 @@ body {
 
 .support {
 	letter-spacing: 0; 
-	color: white;
+	color: var(--text);
 	font-family: proximanova;
 	font-size: 150%;
 	width: 50%;

@@ -14,7 +14,7 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 	    <link type="text/css" rel="stylesheet" href="styles/style.css">
-	    <script src="javascript/index.js"></script>
+	    <script src="scripts/index.js"></script>
 	</head>
 
 	<body>
@@ -35,8 +35,14 @@
 			        <li class="nav-button-container">
 			          <a class="nav-button" href='{{ url_for("favourites") }}'>RESOURCES</a>
 			        </li>
+			        <li class="nav-button-container">
+						<a class="nav-button" href='{{ url_for("suggest") }}'>ROLES</a>
+					</li>
 					<li class="nav-button-container">
 						<a class="nav-button" href='{{ url_for("suggest") }}'>ABOUT</a>
+					</li>
+					<li class="nav-button-container">
+						<a class="nav-button" href='{{ url_for("suggest") }}'>EXECS</a>
 					</li>
 			        <li class="nav-button-container">
 			          <a class="nav-button" href='{{ url_for("about") }}'>FAQS</a>
@@ -51,13 +57,16 @@
 			<div class="cta-container">
 				A COMMUNITY OF
 				<br class="breakline-small">
-				<span class="typewriter" data-period="2000" data-type='[ "LEADERS.", "THINKERS.", "PIONEERS.", "DISTRUPTORS.", "INNOVATORS.", "VISIONARIES." ]'>A COMMUNITY OF</span>
+				<span class="typewriter" data-period="2000" data-type='[ "LEADERS.", "THINKERS.", "PIONEERS.", "DISTRUPTORS.", "INNOVATORS.", "VISIONARIES.", "CREATORS.", "COLLABORATORS." ]'></span>
 			</div>
 			<div class="support">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
 				molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
 				numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
 				optio, eaque rerum!
+			</div>
+			<div class="discover-container">
+				<button class="discover-button">DISCOVER MORE</a>
 			</div>
 		</div>
 
