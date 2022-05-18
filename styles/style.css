@@ -29,23 +29,21 @@
   }
 }
 
-:root {
-  --navbar: #291e2c;
-  --background: #4e3644;
-  --contrast: #f0bd30;
-  --text: white;
-}
-
 * {
 	font-family: abolition;
 }
 
-.navbar-brand {
-	padding: 0;
+:root {
+  --navbar: white;
+  --navbar-text: black;
+  --background: white;
+  --contrast: orange;
+  --main-text: #735cdd;
+  --text: black;
 }
 
-.brand-name {
-	color: var(--text);
+.navbar-brand {
+	padding: 0;
 }
 
 .navbar {
@@ -55,19 +53,24 @@
     letter-spacing: 1px; 
 }
 
+#brand-name {
+	color: var(--navbar-text);
+	text-decoration: none;
+}
+
 .navbar-brand {
-	color: var(--text);
+	color: var(--navbar-text);
 	font-size: 200%;
 }
 
 .navbar-brand:hover {
-	color: var(--text);
+	color: var(--navbar-text);
 }
 
 .nav-button {
 	display: inline-block;
 	position: relative;
-	color: var(--text);
+	color: var(--navbar-text);
 	text-decoration: none;
 	font-size: 150%;
 	vertical-align: middle;
@@ -75,7 +78,7 @@
 }
 
 .nav-button:hover {
-	color: var(--text);
+	color: var(--navbar-text);
 }
 
 .nav-button:after {
@@ -86,7 +89,7 @@
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: var(--text);
+	background-color: var(--navbar-text);
 	transform-origin: bottom right;
 	transition: transform 0.25s ease-out;
 }
@@ -138,7 +141,6 @@ body {
 	background-color: var(--contrast);
 	border: 2px solid var(--contrast);
 	text-decoration: none;
-	width: 20%;
 	transition: .3s;
 }
 
@@ -154,20 +156,22 @@ body {
 .container {
 	margin: 5%;
 	margin-top: 3%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 .cta-container {
 	font-size: 850%;
-	color: var(--text);
 	line-height: 120%;
 	letter-spacing: 1px;
 }
 
 .typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .05em solid var(--contrast); /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  overflow: hidden;
+  border-right: .05em solid var(--contrast);
+  white-space: nowrap;
+  margin: 0 auto;
+  color: var(--main-text);
   animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
@@ -178,5 +182,19 @@ body {
 	color: var(--text);
 	font-family: proximanova;
 	font-size: 150%;
-	width: 50%;
+}
+
+.info-container {
+	max-width: 100%;
+}
+
+.img-container {
+	display: flex;
+	align-items: center;
+}
+
+#main-image {
+	object-fit: contain;
+	width: 100%;
+	margin: auto;
 }

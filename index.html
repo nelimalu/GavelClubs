@@ -18,12 +18,12 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-dark custom-colour">
+		<nav class="navbar navbar-expand-lg navbar-light custom-colour sticky-top">
 		  <div class="container-fluid">
-		    <a class="navbar-brand" href='/'>
+		    <span class="navbar-brand" href='/'>
 		    	<img id="logo" src="assets/images/logo.ico" alt="logo" height="40">
-		    	<t class="brand-name">LC GAVEL CLUB</t>
-		   	</a>
+		    	<a id="brand-name" href="#" onmouseover="changeBrandName('Leaders Collective Gavel Club')" onmouseleave="changeBrandName('LCGC')">LCGC</a>
+		   	</span>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -54,19 +54,24 @@
 		</nav>
 
 		<div class="container">
-			<div class="cta-container">
-				A COMMUNITY OF
-				<br class="breakline-small">
-				<span class="typewriter" data-period="2000" data-type='[ "LEADERS.", "THINKERS.", "PIONEERS.", "DISTRUPTORS.", "INNOVATORS.", "VISIONARIES.", "CREATORS.", "COLLABORATORS." ]'></span>
+			<div class='info-container'>
+				<div class="cta-container">
+					A COMMUNITY OF
+					<br class="breakline-small">
+					<span class="typewriter" data-period="2000" data-type='[ "LEADERS.", "THINKERS.", "PIONEERS.", "DISTRUPTORS.", "INNOVATORS.", "VISIONARIES.", "CREATORS.", "COLLABORATORS." ]'></span>
+				</div>
+				<div class="support">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+					molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+					numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+					optio, eaque rerum!
+				</div>
+				<div class="discover-container">
+					<button class="discover-button">DISCOVER MORE</button>
+				</div>
 			</div>
-			<div class="support">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-				molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-				numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-				optio, eaque rerum!
-			</div>
-			<div class="discover-container">
-				<button class="discover-button">DISCOVER MORE</a>
+			<div class="img-container">
+				<img id="main-image" src="assets/images/businessfiller.png" alt="filler image">
 			</div>
 		</div>
 

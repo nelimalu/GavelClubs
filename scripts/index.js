@@ -52,3 +52,10 @@ window.onload = function() {
         }
     }
 };
+
+
+function changeBrandName(name) {
+    let brand = document.getElementById("brand-name");
+    brand.innerHTML = name;
+}
+
