@@ -51,6 +51,10 @@ window.onload = function() {
           new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
+
+    window.addEventListener('scroll', function() {
+
+  });
 };
 
 
@@ -58,4 +62,3 @@ function changeBrandName(name) {
     let brand = document.getElementById("brand-name");
     brand.innerHTML = name;
 }
-
