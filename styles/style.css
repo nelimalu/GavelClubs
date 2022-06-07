@@ -55,7 +55,7 @@ p {
 	background-color: var(--navbar);
 	display: flex;
     align-items: center;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
 }
 
 #brand-name {
@@ -158,11 +158,11 @@ body {
 	margin-top: 1%;
 }
 
-.container {
+.intro-container {
+	display: flex;
 	margin: 5%;
 	margin-top: 3%;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	padding: 0;
 }
 
 .cta-container {
@@ -177,25 +177,26 @@ body {
   white-space: nowrap;
   margin: 0 auto;
   color: var(--main-text);
-  animation: 
+  animation:
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 
 .support {
-	letter-spacing: 0; 
+	letter-spacing: 0;
 	color: var(--text);
 	font-family: proximanova;
 	font-size: 150%;
 }
 
 .info-container {
-	max-width: 100%;
+	width: 100%;
 }
 
 .img-container {
 	display: flex;
 	align-items: center;
+	width: 100%;
 }
 
 #main-image {
@@ -210,7 +211,7 @@ body {
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
-  
+
 }
 
 ::-webkit-scrollbar-thumb {
@@ -224,21 +225,210 @@ body {
 
 .items-container {
 	padding: 10%;
-	padding-left: 20%;
-	padding-right: 20%;
+	padding-left: 10%;
+	padding-right: 10%;
 	display: grid;
-	grid-template-rows: repeat(auto-fill, 100%);
-	grid-gap: 50%;
-	height: fit-content;
+	grid-template-rows: max-content;
+	/*grid-gap: 50%;*/
 }
 
 .item {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	width: 100%;
-	height: 100%;
-	padding: 1%;
+	display: flex;
+	margin: 10%;
+	margin-bottom: 0;
+	height: fit-content;
+
 	background-color: var(--item-background);
 	border-radius: 10px;
 	box-shadow: 0 30px 50px -30px #aaa;
+
+	transition: .3s;
+}
+
+.item:hover {
+	transform: scale(1.05);
+}
+
+.item-info {
+	padding: 3%;
+	width: 100%;
+}
+
+.item-image {
+	height: 300px;
+	margin: auto;
+	display: block;
+	border-radius: 10px;
+}
+
+.item-title {
+	font-family: abolition;
+	font-size: 500%;
+}
+
+.item-text {
+	font-family: proximanova;
+	font-size: 200%;
+	height: fit-content;
+}
+
+.heading {
+	text-align: center;
+	font-size: 500%;
+}
+
+.subheading {
+	margin: 5%;
+	font-family: proximanova;
+	text-align: center;
+	font-size: 200%;
+}
+
+.link {
+	font-family: proximanova;
+	color: var(--main-text);
+	text-decoration: none;
+}
+
+.link:hover {
+	color: var(--main-text);
+	text-decoration: underline;
+}
+
+footer {
+	margin-bottom: 3%;
+	text-align: center;
+	font-family: proximanova;
+	color: black;
+}
+
+.slide-up-fade-in {
+    visibility: hidden;
+}
+
+@keyframes slide-up-fade-in{
+    0% {
+        opacity:0;
+        transform:  translate(0px,40px)  ;
+    }
+    100% {
+        opacity:1;
+        transform:  translate(0px,0px)  ;
+    }
+}
+
+@-moz-keyframes slide-up-fade-in{
+    0% {
+        opacity:0;
+        -moz-transform:  translate(0px,40px)  ;
+    }
+    100% {
+        opacity:1;
+        -moz-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-webkit-keyframes slide-up-fade-in {
+    0% {
+        opacity:0;
+        -webkit-transform:  translate(0px,40px)  ;
+    }
+    100% {
+        opacity:1;
+        -webkit-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-o-keyframes slide-up-fade-in {
+    0% {
+        opacity:0;
+        -o-transform:  translate(0px,40px)  ;
+    }
+    100% {
+        opacity:1;
+        -o-transform:  translate(0px,0px)  ;
+    }
+}
+
+@-ms-keyframes slide-up-fade-in {
+    0% {
+        opacity:0;
+        -ms-transform:  translate(0px,40px)  ;
+    }
+    100% {
+        opacity:1;
+        -ms-transform:  translate(0px,0px)  ;
+    }
+} 
+
+
+.default-container {
+	text-align: center;
+	margin: 3%;
+}
+
+.blue {
+	color: var(--main-text);
+}
+
+#search {
+	font-family: proximanova;
+	font-size: 200%;
+	border: none;
+	outline: none;
+	border-bottom: 3px solid black;
+	width: 70%;
+	padding-left: 0;
+	caret: block;
+	transition: .5s;
+	margin-bottom: 30px;
+}
+
+#search:focus {
+	border-color: var(--main-text);
+}
+
+.faq {
+	width: 100%;
+	background-color: white;
+	text-align: left;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	display: flex;
+	align-items: center;
+	transition-duration: .1s;
+}
+
+#drop {
+	transition-duration: 0.3s;
+	margin-right: 10px;
+}
+
+#drop.active {
+	
+}
+
+.main-faq-container {
+	padding: 30px 5% 0 5%;
+}
+
+.faq-container {
+	background-color: white;
+	border-bottom: 1px solid #ebebeb;
+	padding: 0.5%;
+}
+
+.faq-question {
+	font-size: 150%;
+}
+
+.faq-answer {
+	padding-left: calc(30px + 0.5%);
+	font-family: proximanova;
+	text-align: left;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
 }
